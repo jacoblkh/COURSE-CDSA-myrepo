@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>COURSE: CDSA, pre-assessment</title>
+    <script>
+    document.addEventListener('DOMContentLoaded', async (event) => {
+      const headerElement = document.getElementById('cdsa-dynamic-header');
+      try {
+        const response = await fetch('http://localhost:8000/api/header');
+        const data = await response.json();
+        console.log(data)
+        headerElement.textContent = data.header; // Set the header text from the backend
+      } catch (error) {
+        console.error('Error fetching header:', error);
+        headerElement.textContent = `Failed to load dynamic header! ${error}`;
+      }
+    });
+    </script>
+</head>
+<body style="text-align: center;">
+    <div style="display: flex; align-items: center; justify-content: center;">
+        <img src="https://img.freepik.com/free-vector/bird-colorful-logo-gradient-vector_343694-1365.jpg?size=338&ext=jpg&ga=GA1.1.98259409.1709024400&semt=sph" alt="sticker-transparent" class="header-image" width="90">
+        <h1 id="cdsa-dynamic-header">COURSE; CDSA - Task 3</h1>
+    </div>
+    <h3>Repository <a href="https://github.com/jacoblkh/COURSE-CDSA-myrepo">https://github.com/jacoblkh/COURSE-CDSA-myrepo</a></h3>
+</body>
+</html>

@@ -8,5 +8,9 @@ python3 -m venv course-cdsa-venv
 activate the new virtual environment
 source course-cdsa-venv/bin/activate
 
+download requirements.txt
+pip install --upgrade pip
+pip install -r requirements.txt
+
 run the python application
-uvicorn workshop01.backend.main:app --reload
+uvicorn main:app --reload
