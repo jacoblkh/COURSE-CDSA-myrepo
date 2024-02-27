@@ -1,0 +1,11 @@
+/* CSS Style */
+
+.header-container {
+    align-items: center;
+    gap: 20px;
+}
+
+.header-image {
+    width: 60px;
+    height: auto;
+}
